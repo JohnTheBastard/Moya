@@ -31,7 +31,7 @@ enough that common things are easy, but comprehensive enough that complicated th
 are also easy.
 
 > If you use Alamofire to abstract away `URLSession`, why not use something
-to abstract away the nitty gritty of URLs, parameters, etc?
+> to abstract away the nitty gritty of URLs, parameters, etc?
 
 Some awesome features of Moya:
 
@@ -59,7 +59,7 @@ Below is a table that shows which version of Moya you should use for
 your Swift version.
 
 | Swift | Moya          | RxMoya        | ReactiveMoya  |
-| ----- | ------------- |---------------|---------------|
+| ----- | ------------- | ------------- | ------------- |
 | 4.X   | >= 9.0        | >= 10.0       | >= 9.0        |
 | 3.X   | 8.0.0 - 8.0.5 | 8.0.0 - 8.0.5 | 8.0.0 - 8.0.5 |
 | 2.3   | 7.0.2 - 7.0.4 | 7.0.2 - 7.0.4 | 7.0.2 - 7.0.4 |
@@ -138,6 +138,8 @@ github "Moya/Moya"
 Then run `carthage update`.
 
 If this is your first time using Carthage in the project, you'll need to go through some additional steps as explained [over at Carthage](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
+
+>  NOTE: At this time, Carthage does not provide a way to build only specific repository submodules. All submodules and their dependencies will be built with the above command. However, you don't need to copy frameworks you aren't using into your project. For instance, if you aren't using `ReactiveSwift`, feel free to delete that framework along with `ReactiveMoya` from the Carthage Build directory after `carthage update`  completes. Or if you are using `ReactiveSwift` but not `RxSwift`, then `RxMoya`, `RxTest`, `RxCocoa`, etc. can safely be deleted.
 
 ### Manually
 
